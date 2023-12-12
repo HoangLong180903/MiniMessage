@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "876732120875",
+    "project_id": "organic-poetry-373016",
+    "storage_bucket": "organic-poetry-373016.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876732120875:android:6e55e31b95a4e36653cf6e",
+        "android_client_info": {
+          "package_name": "com.example.chat_callvideoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQvFy4hVLtx8x5fbckRwyDz2hdanIPD18"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/SCREEN"
+    tools:context=".IntroScreen.OnBroadingActivity">
+
+    <TextView
+        android:id="@+id/onBroading_tvSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Skip"
+        android:textColor="#00CDBD"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/onBroading_viewPager"
+        android:layout_width="match_parent"
+        android:layout_below="@id/onBroading_tvSkip"
+        android:layout_above="@id/onBroading_nextPage"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/onBroading_nextPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp">
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/onBroading_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="7dp"
+            app:ci_drawable="@drawable/bg_circle" />
+
+        <TextView
+            android:id="@+id/onBroading_tvNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="7dp"
+            android:text="Next"
+            android:textColor="#00CDBD"
+            android:layout_centerVertical="true"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

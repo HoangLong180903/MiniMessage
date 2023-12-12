@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/SCREEN"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        >
+
+        <ImageView
+            android:id="@+id/iconBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/chat" />
+
+        <TextView
+            android:id="@+id/tvTopMain"
+            style="@style/TEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Đoạn Chat"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:thumb="@drawable/thumb_layerlist"
+            android:layout_margin="10dp"
+            app:showText="false"
+            app:track="@drawable/track_backgrounds" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/rc_user_statuses"
+        tools:listitem="@layout/item_status"
+        android:layout_below="@id/top"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        style="@style/SCREEN"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rc_conversation"
+        tools:listitem="@layout/item_conversation"
+        android:layout_below="@id/rc_user_statuses"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        style="@style/SCREEN"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gradient_end_color"
+        app:menu="@menu/menu_bottom_nav"
+        app:itemIconTint="@null"
+        android:id="@+id/bottom_nav"
+        />
+</RelativeLayout>
